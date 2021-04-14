@@ -1,0 +1,13 @@
+#imgbg {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+section {
+    margin: 2%;
+}
