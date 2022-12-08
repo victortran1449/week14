@@ -19,23 +19,11 @@ const hoverColorText = () => {
   colorText.classList.remove("hidden");
 };
 
-const radioButtons = document.querySelectorAll("input");
-
-const getSelectedColor = () => {
-  let selectedColor;
-  for (let button of radioButtons) {
-    if (button.checked) {
-      selectedColor = button.value;
-    }
-  }
-  return selectedColor;
-};
-
-const changeParaTextColor = () => {
-  let selectedColor = getSelectedColor();
+const changeParaTextColor = (e) => {
+  let selectedColor = e.target.value
   coordinatePara.style.color = selectedColor;
 };
 
-map.addEventListener("mouseover", hoverColorText);
-map.addEventListener("mouseover", showCoordinates);
+map.addEventListener("mouseover", hoverColorText, (once = true));
+map.addEventListener("mousemove", showCoordinates);
 colorText.addEventListener("click", changeParaTextColor);
