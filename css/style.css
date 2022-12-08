@@ -11,3 +11,12 @@ p {
 section {
     margin: 2%;
 }
+.hidden {
+    opacity: 0;
+}
+@media screen and (min-width: 600px) {
+    .text {
+        display: flex;
+        justify-content: space-between;
+    }
+}
